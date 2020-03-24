@@ -102,7 +102,7 @@ def movies_with_directors_set(source)
     puts director_name
     while movie_index < source[director_index][:movies].length do
       movie_data = source[director_index][:movies][movie_index]
-      movie_array[movie_index] << movie_with_director_name(director_name, movie_data)
+      movie_array << movie_with_director_name(director_name, movie_data)
       movie_index += 1
     end
     director_index += 1 
