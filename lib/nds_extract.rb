@@ -97,17 +97,12 @@ def movies_with_directors_set(source)
   movie_array = []
   director_index = 0 
   while director_index < source.length do 
-    movie_index = 0 
     director_name = source[director_index][:name]
     puts director_name
-    while movie_index < source[director_index][:movies].length do
-      movie = source[director_index][:movies]
-      movie_array[movie_index] << movies_with_director_key(director_name, movie)
-      movie_index += 1
+    movie = source[director_index][:movies]
+    movie_array << movies_with_director_key(director_name, movie)
+    director_index+=1 
     end
-    director_index += 1 
-  end
-  movie_array= movie_array.reverse()
   pp movie_array
   movie_array
 end
